@@ -149,6 +149,10 @@ set cc=81               " red line
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 		\| exe "normal! g'\"" | endif
+
+	augroup bashalias
+		autocmd BufRead,BufNewFile *_aliases set filetype=sh
+	augroup END
 endif
 
 
