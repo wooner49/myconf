@@ -1,5 +1,5 @@
-set nocompatible    " be improved, required
-filetype off        " required
+set nocompatible
+filetype off
 filetype indent on
 
 " set the runtime path to include Vundle
