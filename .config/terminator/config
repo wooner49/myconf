@@ -1,0 +1,9 @@
+[global_config]
+  focus = system
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    active_encodings = EUC-KR, UTF-8, ISO-8859-1
+    encoding = EUC-KR
