@@ -1,6 +1,5 @@
 set nocompatible
 filetype off
-filetype indent on
 
 " set the runtime path to include Vundle
 "set rtp+=~/.vim/bundle/Vundle.vim
@@ -96,12 +95,26 @@ cnoreabbrev gt Gtags
 map <C-j> :cn<CR>
 map <C-k> :cp<CR>
 
+" ==================== General Configuration ====================
 
-" custom vim setting
 if has("syntax")
     syntax on
 endif
+set history=1000        " Store lots of :cmdline history
+set textwidth=80        " Text width
+set mouse=a             " Enable mouse in all modes
+set laststatus=2        " Always show status line
+set ruler               " Show the cursor position
+set title               " Show the filename in the window titlebar
+set showmatch			" Highlight matching braces
+set showcmd             " Show the (partial) command as it's being typed
+set showmode            " Show the current mode
+set autoread            " Reload files changed outside vim
+set nostartofline       " Don't reset cursor to start of line when moving around
 
+" ==================== Indentation ====================
+
+filetype indent on
 set ts=4                " tabsize
 set shiftwidth=4        " tabsize when autoindent
 set sts=4
@@ -111,30 +124,35 @@ set cindent
 set smartindent
 "set copyindent
 "set preserveindent
-set hlsearch            " highlight search
-set incsearch
-set showmatch			" highlight matching braces
-set showcmd
 set matchtime=1
-set scrolloff=10
+
+" ==================== Scrolling ====================
+
+set scrolloff=10        " Start scrolling when we're 10 lines away from margins
+
+" ==================== Search ====================
+set incsearch           " Find the next match as we type the search
+set hlsearch            " Highlight search
+set ignorecase          " Ignore case when searching
+set smartcase           " Unless we type a capital
 
 set fileencodings=euc-kr,ucs-bom,utf-8,latin-1
 "set fileencodings=utf-8,ucs-bom,euc-kr,latin-1
-set textwidth=80
-set history=1000
-set ruler
 set backspace=2
-set laststatus=2        " status bar
-set mouse=a
 
 set nofoldenable		" don't collapse code line
 set mmp=5000
 set cc=81               " red line
-set ignorecase
 
-au BufReadPost *
-	\ if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif
+" ==================== Automatic Commands ====================
 
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+		\| exe "normal! g'\"" | endif
+endif
+
+
+" ==================== Key mappings ====================
 
 " mode line up and down with indentation
 " do not work when tmux is used 
