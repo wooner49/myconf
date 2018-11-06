@@ -113,6 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -f ~/repo/my_dotfiles/bashrc ]; then
-	. ~/repo/my_dotfiles/bashrc -init
+if [ -f ~/bin/go.sh ]; then
+	. ~/bin/go.sh --init
+	alias go='. ~/bin/go.sh'
 fi

@@ -23,6 +23,8 @@ for i in $PACKAGE_LIST; do
 	sudo apt-get install -y $i
 done
 
+## Locale gen
+sudo locale-gen ko_KR.EUC-KR
 
 ## gcc, g++ Compiler downgrade for Tibero6
 gcc_major=`gcc --version | grep gcc | awk '{print substr($4, 1, 1)}'`
