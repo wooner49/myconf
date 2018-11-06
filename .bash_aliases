@@ -28,4 +28,3 @@ svnle()
 {
 	svn propedit svn:log --revprop -r $1 --editor-cmd vim
 }
-

@@ -13,6 +13,7 @@ init_env()
 	export JAVA_HOME=$HOME/java/jdk1.6
 	export PATH=$JAVA_HOME/bin:$PATH
 
+	alias go='. ~/bin/go.sh'
 	alias cdt='cd $TB_DIR'
 	alias cdtb='cd $TB_BRANCHES'
 	alias 5b='cd $REL5'

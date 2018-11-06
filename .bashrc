@@ -115,5 +115,4 @@ fi
 
 if [ -f ~/bin/go.sh ]; then
 	. ~/bin/go.sh --init
-	alias go='. ~/bin/go.sh'
 fi
