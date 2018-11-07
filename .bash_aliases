@@ -28,3 +28,9 @@ svnle()
 {
 	svn propedit svn:log --revprop -r $1 --editor-cmd vim
 }
+
+
+# git aliases
+alias gb='git branch'
+alias gbr='git branch -r'
+alias gba='git branch -a'
