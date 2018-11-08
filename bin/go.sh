@@ -23,9 +23,6 @@ init_env()
   alias tb='go --path `pwd`; source ./tbenv `pwd` tibero'
   alias vck='echo "TB_HOME :  $TB_HOME"; echo "TB_SID  :   $TB_SID";'
 
-  alias 5m='cd $TB_BRANCHES/5; tb;'
-  alias 6m='cd $TB_BRANCHES/6; tb;'
-  alias 7m='cd $TB_BRANCHES/7;'
   alias 7f='cd $TB_BRANCHES/coreframe'
 
   alias issue='cd $TB_DIR/issue;'
@@ -75,7 +72,6 @@ tibero_env_for_6()
 
 tibero_env_for_7()
 {
-  echo "7"
   export LANG="ko_KR.UTF-8"
   export LC_ALL="ko_KR.UTF-8"
 

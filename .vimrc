@@ -66,13 +66,13 @@ set cc=81               " red line
 " ==================== Automatic Commands ====================
 
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-		\| exe "normal! g'\"" | endif
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+        \| exe "normal! g'\"" | endif
 
-	augroup configurations
-		autocmd BufRead,BufNewFile *_aliases set filetype=sh
-        autocmd BufRead,BufNewFile *env set filetype=sh
-	augroup END
+  augroup configurations
+    autocmd BufRead,BufNewFile *_aliases set filetype=sh
+    autocmd BufRead,BufNewFile *env set filetype=sh
+  augroup END
 endif
 
 

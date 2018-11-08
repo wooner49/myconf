@@ -34,3 +34,13 @@ svnle()
 alias gb='git branch'
 alias gbr='git branch -r'
 alias gba='git branch -a'
+alias gbv='git branch -v'
+alias gg='git g'
+alias gg2='git g2'
+alias gs='git status'
+
+
+# Tibero aliases
+alias 5m='cd $TB_BRANCHES/5; tb;'                                              
+alias 6m='cd $TB_BRANCHES/6; tb;'                                              
+alias 7m='cd $TB_BRANCHES/7; tb;'  

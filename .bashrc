@@ -113,6 +113,36 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+##############################################################################
+############################# My personal bashrc #############################
+##############################################################################
+
+extract() 
+{
+  if [ -f $1 ]; then
+    case $1 in 
+      *)      echo "don't know how to extract '$1'..."  ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
+}
+
+ulimit -c unlimited
+export LANG="ko_KR.UTF-8"
+export LC_ALL="ko_KR.UTF-8"
+
+
+
+
+
+
+
+
+
+
+
 if [ -f ~/bin/go.sh ]; then
 	. ~/bin/go.sh --init
 fi
