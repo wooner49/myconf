@@ -132,17 +132,7 @@ extract()
 ulimit -c unlimited
 export LANG="ko_KR.UTF-8"
 export LC_ALL="ko_KR.UTF-8"
+export EDITOR=vim
+export JAVA_HOME=$HOME/java/jdk1.6
+export PATH=$JAVA_HOME/bin:$PATH
 
-
-
-
-
-
-
-
-
-
-
-if [ -f ~/bin/go.sh ]; then
-	. ~/bin/go.sh --init
-fi
