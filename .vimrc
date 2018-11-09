@@ -15,16 +15,17 @@ if has("syntax")
     syntax on
 endif
 set history=1000        " Store lots of :cmdline history
-set textwidth=80        " Text width
+"set textwidth=80        " Text width
 set mouse=a             " Enable mouse in all modes
 set laststatus=2        " Always show status line
 set ruler               " Show the cursor position
 set title               " Show the filename in the window titlebar
-set showmatch			" Highlight matching braces
+set showmatch			      " Highlight matching braces
 set showcmd             " Show the (partial) command as it's being typed
 set showmode            " Show the current mode
 set autoread            " Reload files changed outside vim
 set nostartofline       " Don't reset cursor to start of line when moving around
+set cc=81               " Red line
 
 " ==================== Indentation ====================
 
@@ -32,7 +33,7 @@ filetype indent on
 set tabstop=2           " Tabstop
 set shiftwidth=2        " The size of an indent
 set softtabstop=2
-set expandtab			" Converting tab to space
+set expandtab			      " Converting tab to space
 set autoindent
 set cindent
 set smartindent
@@ -56,7 +57,6 @@ set backspace=2
 
 set nofoldenable		" don't collapse code line
 set mmp=5000
-set cc=81               " red line
 
 "set fileencoding=utf-8
 "set encoding=utf-8
@@ -79,14 +79,13 @@ endif
 " ==================== Key mappings ====================
 
 " mode line up and down with indentation
-" do not work when tmux is used 
+" do not work using tmux.
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
 inoremap <C-Down> <Esc>:m .+1<CR>==gi
 inoremap <C-Up> <Esc>:m .-2<CR>==gi
 vnoremap <C-Down> :m '>+1<CR>gv=gv
 vnoremap <C-Up> :m '<-2<CR>gv=gv
-
 
 " LLVM syntax highliting
 augroup filetype
@@ -105,14 +104,6 @@ let g:bufExplorerUseCurrentWindow=1
 "let unuse_tb_code_format= 0                
 
 nmap <F9> :set ignorecase! ignorecase?<CR>
-
-
-
-
-
-
-
-
 
 
 " Include tibero vimrc 
