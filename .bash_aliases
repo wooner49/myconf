@@ -55,6 +55,7 @@ alias 5m='cd $TB_BRANCHES/5; tb; export LANG="ko_KR.EUC-KR"; export LC_ALL="ko_K
 alias 6m='cd $TB_BRANCHES/6; tb; export LANG="ko_KR.EUC-KR"; export LC_ALL="ko_KR.EUC-KR";'
 alias 7m='cd $TB_BRANCHES/7; tb; export LANG="ko_KR.UTF-8"; export LC_ALL="ko_KR.UTF-8";'
 alias up='5p; svn up; 6p; svn up;'
+alias gt='ps -ef | grep tbsvr;'
 
 alias cdh='cd $TB_HOME'
 alias cdi='cd $TB_HOME/instance/$TB_SID'
