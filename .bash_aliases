@@ -39,6 +39,9 @@ alias go='git checkout'
 
 
 # Tibero aliases
+tb2() {
+  echo "$dir_name"
+}
 export TB_DIR=$HOME/tibero
 export TB_BRANCHES=$TB_DIR/branches
 export REL5=$TB_BRANCHES/5_rel
@@ -60,7 +63,7 @@ alias gt='ps -ef | grep tbsvr;'
 alias cdh='cd $TB_HOME'
 alias cdi='cd $TB_HOME/instance/$TB_SID'
 alias cdlog='cd $TB_HOME/instance/$TB_SID/log'
-alias clst='cd $TB_HOME; svn revert -R *; $HOME/bin/clst.sh;'
+alias clst='cd $TB_HOME; svn revert -R *; $HOME/bin/svn_clst.sh;'
 
 alias vitip='vi $TB_HOME/config/$TB_SID.tip'
 alias vidsn='vi $TB_HOME/client/config/tbdsn.tbr'
