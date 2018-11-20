@@ -39,8 +39,23 @@ alias go='git checkout'
 
 
 # Tibero aliases
-tb2() {
-  echo "$dir_name"
+tb() {
+  dir=`pwd`
+  if [ -e "$dir""/tbenv" ]; then
+    . ./tbenv $dir tibero
+    first="${dir##*/}"
+    release="${dir%/*}"
+    second="${release##*/}"
+    if [ "$first" = "6" ] || [ "$first" = "5" ] || [ "$second" = "6_rel" ] || [ "$second" = "5_rel" ]; then
+      export LANG="ko_KR.EUC-KR"
+      export LC_ALL="ko_KR.EUC-KR"
+    elif [ "$first" = "7" ] || [ "$second" = "7_rel" ]; then
+      export LANG="ko_KR.UTF-8"
+      export LC_ALL="ko_KR.UTF-8"
+    fi
+  else
+    echo "Not appropriate place for \$TB_HOME"
+  fi
 }
 export TB_DIR=$HOME/tibero
 export TB_BRANCHES=$TB_DIR/branches
@@ -53,10 +68,9 @@ alias 5b='cd $REL5'
 alias 5p='cd $REL5/patch'
 alias 6b='cd $REL6'
 alias 6p='cd $REL6/patch'
-alias tb='. ./tbenv `pwd` tibero'
-alias 5m='cd $TB_BRANCHES/5; tb; export LANG="ko_KR.EUC-KR"; export LC_ALL="ko_KR.EUC-KR";'
-alias 6m='cd $TB_BRANCHES/6; tb; export LANG="ko_KR.EUC-KR"; export LC_ALL="ko_KR.EUC-KR";'
-alias 7m='cd $TB_BRANCHES/7; tb; export LANG="ko_KR.UTF-8"; export LC_ALL="ko_KR.UTF-8";'
+alias 5m='cd $TB_BRANCHES/5; tb;'
+alias 6m='cd $TB_BRANCHES/6; tb;'
+alias 7m='cd $TB_BRANCHES/7; tb;'
 alias up='5p; svn up; 6p; svn up;'
 alias gt='ps -ef | grep tbsvr;'
 
