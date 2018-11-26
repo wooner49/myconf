@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype plugin indent on
 
 " ==================== Vundle ====================
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -29,7 +29,6 @@ set cc=81               " Red line
 
 " ==================== Indentation ====================
 
-filetype plugin indent on
 set tabstop=2           " Tabstop
 set shiftwidth=2        " The size of an indent
 set softtabstop=2
@@ -40,7 +39,7 @@ set smartindent
 "set copyindent
 "set preserveindent
 set matchtime=1
-let g:sh_indent_case_labels=1 " Modify shell case statement indent error
+let g:sh_indent_case_labels=1   " Modify shell case statement indent error
 
 " ==================== Scrolling ====================
 
