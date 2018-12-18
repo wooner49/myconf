@@ -19,4 +19,8 @@ alias cst='config status'
 
 # xv6 aliases
 alias sethome='export PROJ_HOME=`pwd`; echo "PROJ_HOME = "$PROJ_HOME;'
-alias xv6run='cd $HOME/Project/xv6; make TOOLPREFIX=i386-elf- qemu'
+alias goxv6='cd $HOME/Project/xv6;'
+alias xv6run='goxv6; make TOOLPREFIX=i386-elf- qemu'
+
+# tags
+alias mktags='. ~/bin/mktags.sh'

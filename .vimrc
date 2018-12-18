@@ -80,3 +80,17 @@ else
   set tags=tags
   set path+=./**
 endif
+
+" cscope
+set csprg=/usr/local/bin/cscope
+set csto=0
+set cst
+set nocsverb
+set nocp
+set splitright
+if filereadable($PROJ_HOME . "cscope.out")
+  cs add $PROJ_HOME/cscope.out
+else
+  cs add cscope.out
+endif
+set csverb
