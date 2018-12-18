@@ -17,4 +17,4 @@ alias config='/usr/local/bin/git --git-dir=$HOME/.myconf --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 
 # xv6 aliases
-alias xv6run='cd $HOME/Project/xv6; make TOOLPREFIX=i386-elf- qemu;'
+alias xv6run='cd $HOME/Project/xv6; make TOOLPREFIX=i386-elf- qemu'
