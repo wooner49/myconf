@@ -49,6 +49,7 @@ set tabstop=2				" Make tabs as wide as four spaces
 set softtabstop=2		" 
 set shiftwidth=2		" Tab size when autoindent
 "set paste					" No autoindent when paste
+let g:sh_indent_case_labels=1 " Modify shell case statement indent error
 
 
 
