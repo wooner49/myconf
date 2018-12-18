@@ -18,4 +18,5 @@ config config --local status.showUntrackedFiles no
 alias cst='config status'
 
 # xv6 aliases
+alias sethome='export PROJ_HOME=`pwd`; echo "PROJ_HOME = "$PROJ_HOME;'
 alias xv6run='cd $HOME/Project/xv6; make TOOLPREFIX=i386-elf- qemu'
