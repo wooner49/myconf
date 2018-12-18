@@ -1,24 +1,24 @@
 set nocompatible
+filetype plugin indent on
+
 
 " ======================== Vundle ========================
-" set runtime path to include Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
-filetype plugin on
 
-" :PluginList		- lists configured plugins
-" :PluginInstall	- installs plugins; append `!` to update or just :PluginUpdate
+" :PluginList		    - lists configured plugins
+" :PluginInstall  	- installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 
+" ======================== General Config ========================
+set backspace=indent,eol,start " Allow backspacing everything in insert mode
 set background=dark
 colorscheme solarized
-
-" ======================== General Config ========================
 syntax on			" Enable syntax highlighting
 set history=1000		" Store lots of :cmdline history
 set textwidth=80		" Text width
@@ -37,7 +37,6 @@ set nostartofline		" Don't reset cursor to start of line when moving around
 
 
 " ======================== Indentation ========================
-filetype indent on
 set autoindent
 set cindent
 set smartindent
@@ -54,7 +53,7 @@ set shiftwidth=2		" Tab size when autoindent
 
 
 " ======================== Scrolling ========================
-set scrolloff=5			" Start scrolling when we're 10 lines away from margins
+set scrolloff=10		" Start scrolling when we're 10 lines away from margins
 
 
 
